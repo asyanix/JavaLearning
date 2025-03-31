@@ -1,6 +1,6 @@
 package animals;
 
-public class Horse extends Animal {
+public class Horse extends Animal implements Speakable, Runnable, Commandable, Eatable, Sleepable {
     private double weight;
     private double speed;
     
@@ -8,6 +8,26 @@ public class Horse extends Animal {
         super(name, type, sound);
         this.weight = weight;
         this.speed = speed;
+    }
+
+    @Override
+    public void run() {
+        System.out.println(name + " бежит.");
+    }
+    
+    @Override
+    public void doCommand(String command) {
+        System.out.println(name + " делает комманду: " + command);
+    }
+    
+    @Override
+    public void eat() {
+        System.out.println(name + " ест.");
+    }
+    
+    @Override
+    public void sleep() {
+        System.out.println(name + " спит.");
     }
     
     public double getWeight() {
