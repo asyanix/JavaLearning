@@ -10,7 +10,7 @@ public class CarWashSimulation {
             car.start();
 
             try {
-                Thread.sleep(6 * 1000); 
+                Thread.sleep(2 * 1000); 
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

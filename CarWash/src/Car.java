@@ -20,7 +20,7 @@ public class Car extends Thread {
             int slotNumber = carWash.enterWashingBay();
             System.out.println(carName + " начала мойку на месте #" + slotNumber);
 
-            Thread.sleep(15 * 1000); // моделируем мойку
+            Thread.sleep(8 * 1000); // моделируем мойку
 
             System.out.println(carName + " завершила мойку на месте #" + slotNumber);
             carWash.leaveWashingBay(slotNumber);
